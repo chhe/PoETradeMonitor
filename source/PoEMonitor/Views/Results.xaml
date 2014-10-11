@@ -19,6 +19,11 @@
                 <DataGrid.RowStyle>
                     <Style TargetType="{x:Type DataGridRow}">
                         <Setter Property="ContextMenu" Value="{StaticResource RowMenu}" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding MatchingRuleName}" Value="Private Chat">
+                                <Setter Property="Background" Value="#FFFFB3B3"/>
+                            </DataTrigger>
+                        </Style.Triggers>                        
                     </Style>
                 </DataGrid.RowStyle>
                 <DataGrid.Columns>
