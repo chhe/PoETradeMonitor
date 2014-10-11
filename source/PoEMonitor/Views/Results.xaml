@@ -8,7 +8,7 @@
       d:DesignHeight="300" d:DesignWidth="300" >
     <Grid>
         <GroupBox Header="Matching Results">
-            <DataGrid Margin="2,2,2,2" MinHeight="90" ItemsSource="{Binding Matches}" AutoGenerateColumns="False" AlternationCount="2" AlternatingRowBackground="Lavender" CanUserAddRows="False" CanUserDeleteRows="False" HorizontalGridLinesBrush="#FFAAAAAA" VerticalGridLinesBrush="#FFAAAAAA">
+            <DataGrid Margin="2,2,2,2" MinHeight="90" ItemsSource="{Binding Matches}" AutoGenerateColumns="False" AlternationCount="2" AlternatingRowBackground="Lavender" CanUserAddRows="False" CanUserDeleteRows="False" HorizontalGridLinesBrush="#FFAAAAAA" VerticalGridLinesBrush="#FFAAAAAA" x:Name="ResultsDataGrid" LoadingRow="ResultsDataGridView_LoadingRow">
                 <DataGrid.Resources>
                     <ContextMenu x:Key="RowMenu" DataContext="{Binding PlacementTarget, RelativeSource={RelativeSource Self}}">
                         <MenuItem Header="Copy Username" Command="{Binding DataContext.CopyUsernameCommand}"/>

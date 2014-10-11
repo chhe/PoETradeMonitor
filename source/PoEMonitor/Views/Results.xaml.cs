@@ -24,5 +24,19 @@ namespace PoEMonitor.Views
         {
             InitializeComponent();
         }
+
+        private void ResultsDataGridView_LoadingRow(object sender, DataGridRowEventArgs e)
+        {
+            if (ResultsDataGrid.Items.Count > 0)
+            {
+                var border = VisualTreeHelper.GetChild(ResultsDataGrid, 0) as Decorator;
+                if (border != null)
+                {
+                    var scroll = border.Child as ScrollViewer;
+                    if (scroll != null) scroll.ScrollToEnd();
+                }
+            }
+        }
+
     }
 }
