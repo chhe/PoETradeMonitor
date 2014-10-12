@@ -25,7 +25,7 @@ namespace PoEMonitor.Views
             InitializeComponent();
         }
 
-        private void ResultsDataGridView_LoadingRow(object sender, DataGridRowEventArgs e)
+        private void ResultsDataGrid_LoadingRow(object sender, DataGridRowEventArgs e)
         {
             if (ResultsDataGrid.Items.Count > 0)
             {
